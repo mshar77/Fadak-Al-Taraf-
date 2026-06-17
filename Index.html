@@ -1,0 +1,669 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فدك الطرف للحوم والخضار والفواكه - الجودة والطزاجة</title>
+    <!-- تضمين خط Cairo الفاخر من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS لتنسيق واجهة المستخدم بأرقى المعايير -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- أيقونات FontAwesome التفاعلية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        organic: {
+                            bordeaux: '#7f1d1d',  /* عنابي فاخر جداً للحوم */
+                            emerald: '#065f46',   /* أخضر عشبي دافئ للخضار والفواكه */
+                            honey: '#d97706',     /* عسلي جذاب للتفاعلات */
+                            sand: '#faf8f5',      /* خلفية رملية دافئة وناعمة */
+                            charcoal: '#1c1917'   /* لون نصوص داكن وأنيق */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #faf8f5;
+        }
+        /* إخفاء أشرطة التمرير الزائدة للتنقل السلس */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-organic-charcoal antialiased selection:bg-organic-emerald selection:text-white">
+
+    <!-- شريط الإعلان العلوي الرفيق والأنيق جداً -->
+    <div class="bg-organic-charcoal text-stone-200 py-3 text-center text-xs font-bold border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span class="flex items-center gap-1.5 text-organic-honey">
+                <span class="w-2 h-2 rounded-full bg-organic-honey animate-ping"></span>
+                محل فدك الطرف - طزاجة يومية تبيض وجهك وتصل لبيتك
+            </span>
+            <span class="hidden md:inline text-stone-400">لحوم بلدية، دواجن مبردة، خضار وفواكه قطاف فجر اليوم</span>
+            <span class="flex items-center gap-2 text-stone-300">
+                <i class="fa-solid fa-medal text-organic-honey"></i>
+                أعلى مستويات النظافة والتعقيم والفرز
+            </span>
+        </div>
+    </div>
+
+    <!-- شريط التنقل (Navbar) ذو التصميم الراقي والمبسط -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-lg border-b border-stone-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- الهوية والشعار الفاخر للمجموعة -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-organic-bordeaux flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-red-900/10">
+                        <i class="fa-solid fa-cheese"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-organic-charcoal block tracking-wide">فدك الطرف</span>
+                        <span class="text-[10px] text-organic-emerald font-black block -mt-1">لحوم طازجة • خضار • فواكه</span>
+                    </div>
+                </div>
+
+                <!-- روابط التنقل السريع للكمبيوتر -->
+                <div class="hidden lg:flex items-center gap-8 font-bold text-stone-600 text-sm">
+                    <a href="#hero" class="hover:text-organic-bordeaux transition-colors">البداية</a>
+                    <a href="#departments" class="hover:text-organic-bordeaux transition-colors">الأقسام</a>
+                    <a href="#products-area" class="hover:text-organic-bordeaux transition-colors">قائمة المنتجات</a>
+                    <a href="#map-section" class="hover:text-organic-bordeaux transition-colors">موقعنا بالخريطة</a>
+                    <a href="#contact" class="hover:text-organic-bordeaux transition-colors">اتصل بنا</a>
+                </div>
+
+                <!-- زر الاتصال المباشر والروابط المحدثة -->
+                <div class="flex items-center gap-2">
+                    <a href="https://linkin1.com/meat" target="_blank" class="hidden sm:inline-flex bg-stone-100 hover:bg-stone-200 text-stone-900 px-4 py-2.5 rounded-xl text-xs font-black items-center gap-1.5 transition-all shadow-sm">
+                        <i class="fa-solid fa-link text-organic-bordeaux"></i>
+                        <span>روابطنا</span>
+                    </a>
+                    <a href="https://www.snapchat.com/add/buadnan707?share_id=cA_FySFNQyOImuowO9DGCw&locale=ar_SA@numbers=arab" target="_blank" class="hidden sm:inline-flex bg-amber-400 hover:bg-amber-500 text-stone-900 px-4 py-2.5 rounded-xl text-xs font-black items-center gap-1.5 transition-all shadow-sm">
+                        <i class="fa-brands fa-snapchat text-sm"></i>
+                        <span>سناب المحل</span>
+                    </a>
+                    <a href="tel:0544103066" class="bg-organic-charcoal hover:bg-organic-bordeaux text-white px-5 py-2.5 rounded-xl text-xs sm:text-sm font-black flex items-center gap-2 transition-all active:scale-95 shadow-sm">
+                        <i class="fa-solid fa-phone text-organic-honey"></i>
+                        <span>0544103066</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الواجهة الفاخرة (Hero Section) بنمط البوتيك الحديث -->
+    <header id="hero" class="relative overflow-hidden bg-gradient-to-b from-stone-100 via-white to-organic-sand py-16 sm:py-24 border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- وسم ترحيبي فخم -->
+            <div class="inline-flex items-center gap-2 bg-stone-100 text-organic-charcoal text-[11px] sm:text-xs font-black px-4 py-2 rounded-full mb-6 border border-stone-200">
+                <i class="fa-solid fa-crown text-organic-honey"></i>
+                نخدمكم يومياً بأعلى جودة وقدر من الاهتمام والنظافة
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-organic-charcoal leading-tight mb-6">
+                سلة منزلك متكاملة <br>
+                من <span class="text-organic-bordeaux">اللحوم الطازجة</span> و <span class="text-organic-emerald">الخضار والفواكه</span>
+            </h1>
+            
+            <p class="text-stone-500 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-semibold leading-relaxed">
+                مرحباً بكم في <span class="text-organic-charcoal font-extrabold">محل فدك الطرف</span>. نوفر لكم تشكيلة يومية متكاملة من ذبائح الغنم والعجول والحاشي، دواجن مبردة، خضروات ورقية طازجة، وفواكه ممتازة مختارة حبة بحبة.
+            </p>
+
+            <!-- أزرار العمل الفورية السلسة -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#products-area" class="bg-organic-bordeaux hover:bg-red-950 text-white px-8 py-4 rounded-2xl font-black text-base shadow-lg shadow-red-900/20 transition-all active:scale-95 flex items-center gap-2">
+                    <i class="fa-solid fa-basket-shopping animate-bounce"></i> تصفح البضاعة واستفسر الآن
+                </a>
+                <a href="#map-section" class="bg-white hover:bg-stone-50 text-organic-charcoal border-2 border-stone-200 px-8 py-4 rounded-2xl font-black text-base flex items-center gap-2 transition-all active:scale-95">
+                    <i class="fa-solid fa-map-location-dot text-organic-emerald"></i> موقع المحل على قوقل ماب
+                </a>
+            </div>
+
+            <!-- ميزات بوتيك فدك الطرف -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
+                <div class="bg-white/85 p-5 rounded-2xl border border-stone-150 shadow-sm flex flex-col items-center">
+                    <span class="text-3xl mb-2">🥩</span>
+                    <h3 class="font-extrabold text-stone-950 text-sm">لحوم بلدية مضمونة</h3>
+                </div>
+                <div class="bg-white/85 p-5 rounded-2xl border border-stone-150 shadow-sm flex flex-col items-center">
+                    <span class="text-3xl mb-2">🥬</span>
+                    <h3 class="font-extrabold text-stone-950 text-sm">خضار فريش يومي</h3>
+                </div>
+                <div class="bg-white/85 p-5 rounded-2xl border border-stone-150 shadow-sm flex flex-col items-center">
+                    <span class="text-3xl mb-2">🍇</span>
+                    <h3 class="font-extrabold text-stone-950 text-sm">فواكه منتقاة بعناية</h3>
+                </div>
+                <div class="bg-white/85 p-5 rounded-2xl border border-stone-150 shadow-sm flex flex-col items-center">
+                    <span class="text-3xl mb-2">✨</span>
+                    <h3 class="font-extrabold text-stone-950 text-sm">تقطيع وتجهيز ممتاز</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- أقسام المحل (تصميم البوتيك ذو الطابع الدافئ) -->
+    <section id="departments" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-organic-honey text-xs font-black tracking-widest uppercase">أقسامنا المتكاملة</span>
+                <h2 class="text-3xl font-extrabold text-organic-charcoal mt-1">تسوّق على ذوقك وبأعلى طزاجة</h2>
+                <p class="text-stone-400 text-sm mt-1">اضغط على أي قسم بالأسفل للذهاب مباشرة وعرض كافة منتجاته الطازجة لليوم</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- قسم اللحوم الطازجة -->
+                <div onclick="filterCategory('meat')" class="group cursor-pointer bg-organic-sand/50 rounded-3xl p-6 border border-stone-200/50 hover:border-organic-bordeaux/30 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-organic-bordeaux text-white flex items-center justify-center text-2xl mx-auto mb-5 shadow-md shadow-red-900/10 group-hover:scale-105 transition-transform">
+                        🥩
+                    </div>
+                    <h3 class="text-lg font-black text-organic-charcoal mb-1">اللحوم الطازجة</h3>
+                    <span id="count-meat" class="text-xs text-organic-bordeaux font-extrabold bg-red-50 px-3 py-1 rounded-full">0 أصناف</span>
+                </div>
+
+                <!-- قسم الدجاج الطازج -->
+                <div onclick="filterCategory('poultry')" class="group cursor-pointer bg-organic-sand/50 rounded-3xl p-6 border border-stone-200/50 hover:border-organic-bordeaux/30 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-organic-honey text-white flex items-center justify-center text-2xl mx-auto mb-5 shadow-md shadow-amber-900/10 group-hover:scale-105 transition-transform">
+                        🐔
+                    </div>
+                    <h3 class="text-lg font-black text-organic-charcoal mb-1">دجاج مبرد وطازج</h3>
+                    <span id="count-poultry" class="text-xs text-organic-honey font-extrabold bg-amber-50 px-3 py-1 rounded-full">0 أصناف</span>
+                </div>
+
+                <!-- قسم الخضار الطازج -->
+                <div onclick="filterCategory('vegetables')" class="group cursor-pointer bg-organic-sand/50 rounded-3xl p-6 border border-stone-200/50 hover:border-organic-bordeaux/30 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-organic-emerald text-white flex items-center justify-center text-2xl mx-auto mb-5 shadow-md shadow-emerald-900/10 group-hover:scale-105 transition-transform">
+                        🍅
+                    </div>
+                    <h3 class="text-lg font-black text-organic-charcoal mb-1">خضار قطاف اليوم</h3>
+                    <span id="count-vegetables" class="text-xs text-organic-emerald font-extrabold bg-emerald-50 px-3 py-1 rounded-full">0 أصناف</span>
+                </div>
+
+                <!-- قسم الفواكه الموسمية -->
+                <div onclick="filterCategory('fruits')" class="group cursor-pointer bg-organic-sand/50 rounded-3xl p-6 border border-stone-200/50 hover:border-organic-bordeaux/30 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-700 text-white flex items-center justify-center text-2xl mx-auto mb-5 shadow-md shadow-purple-900/10 group-hover:scale-105 transition-transform">
+                        🍇
+                    </div>
+                    <h3 class="text-lg font-black text-organic-charcoal mb-1">فواكه ممتازة</h3>
+                    <span id="count-fruits" class="text-xs text-purple-700 font-extrabold bg-purple-50 px-3 py-1 rounded-full">0 أصناف</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات والبحث المباشر والفرز التفاعلي -->
+    <section id="products-area" class="py-16 bg-stone-50 border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <span class="bg-organic-bordeaux/5 text-organic-bordeaux text-xs font-black px-3.5 py-1.5 rounded-full border border-organic-bordeaux/10">قائمة البضاعة اليومية</span>
+                <h2 class="text-3xl font-extrabold text-organic-charcoal mt-3">تصفح البضاعة واطلب بضغطة زر</h2>
+                <p class="text-stone-500 text-xs sm:text-sm mt-1">تصفح الأقسام أو ابحث مباشرة عما تريد، واضغط زر الاستفسار ليفتح محادثة الواتساب فوراً للتنسيق وتجهيز طلبك.</p>
+            </div>
+
+            <!-- شريط البحث السريع والذكي (Live Search) -->
+            <div class="max-w-md mx-auto mb-8 relative">
+                <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-stone-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" id="live-search-input" onkeyup="searchProducts()" placeholder="ابحث عن: حاشي، طماطم، عنب، دجاج..." class="w-full pl-4 pr-11 py-3.5 bg-white border border-stone-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-organic-bordeaux focus:border-transparent outline-none font-bold text-sm text-stone-900 transition-all">
+                <!-- زر لمسح البحث عند الكتابة -->
+                <button id="clear-search-btn" onclick="clearSearch()" class="absolute inset-y-0 left-0 pl-4 flex items-center text-stone-400 hover:text-stone-600 hidden">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+
+            <!-- أزرار الفرز والتصنيف -->
+            <div class="flex justify-start md:justify-center gap-3 mb-10 overflow-x-auto pb-4 no-scrollbar -mx-4 px-4">
+                <button onclick="filterCategory('all')" id="btn-all" class="filter-btn active-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-border-all text-xs"></i> الكل
+                </button>
+                <button onclick="filterCategory('meat')" id="btn-meat" class="filter-btn inactive-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0">
+                    🥩 لحوم طازجة
+                </button>
+                <button onclick="filterCategory('poultry')" id="btn-poultry" class="filter-btn inactive-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0">
+                    🐔 دجاج طازج
+                </button>
+                <button onclick="filterCategory('vegetables')" id="btn-vegetables" class="filter-btn inactive-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0">
+                    🍅 خضار طازجة
+                </button>
+                <button onclick="filterCategory('fruits')" id="btn-fruits" class="filter-btn inactive-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0">
+                    🍇 فواكه موسمية
+                </button>
+            </div>
+
+            <!-- شبكة عرض بطاقات المنتجات -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- يتم تعبئة المنتجات تلقائياً وتحديثها برمجياً عبر الـ JavaScript -->
+            </div>
+
+            <!-- رسالة تنبيه عند عدم وجود نتائج للبحث -->
+            <div id="no-results-msg" class="text-center py-12 hidden">
+                <span class="text-5xl block mb-2">🔍</span>
+                <h4 class="font-bold text-stone-800 text-lg">لم نعثر على هذا المنتج في فدك الطرف</h4>
+                <p class="text-xs text-stone-400 mt-1">يرجى المحاولة مجدداً بعبارة بحث أخرى أو اختيار "الكل" لتصفح البضاعة المتوفرة بالكامل.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- موقع فرع فدك الطرف على قوقل ماب المحدث -->
+    <section id="map-section" class="py-16 bg-white border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-stone-50 to-organic-sand/50 p-8 rounded-3xl border border-stone-200 shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- الجانب التوضيحي للفرع -->
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="bg-organic-bordeaux/5 text-organic-bordeaux text-xs font-bold px-3 py-1 rounded-full border border-organic-bordeaux/10">📍 موقعنا على الخريطة</span>
+                    <h2 class="text-3xl font-extrabold text-organic-charcoal">أين تجد فدك الطرف؟</h2>
+                    <p class="text-stone-500 text-sm leading-relaxed font-semibold">
+                        يسعدنا ترحيبكم في فرعنا المتميز لتستمتعوا بتجربة فريدة لمشاهدة جودة ونظافة بضاعتنا بأنفسكم، أو طلب تجهيزها مسبقاً قبل وصولكم لتوفير وقتكم.
+                    </p>
+                    <div class="pt-4 space-y-2">
+                        <div class="flex items-center gap-3 text-sm text-stone-600 font-bold">
+                            <i class="fa-solid fa-location-dot text-organic-bordeaux text-lg"></i>
+                            <span>المملكة العربية السعودية، الهفوف / المبرز</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-stone-600 font-bold">
+                            <i class="fa-solid fa-phone text-organic-honey text-lg"></i>
+                            <span>تواصل معنا للتوجيه: 0544103066</span>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <a href="https://maps.app.goo.gl/U4vLQMtsZZZ6yi168" target="_blank" class="inline-flex bg-organic-bordeaux hover:bg-red-950 text-white font-black px-6 py-3 rounded-xl shadow-md transition-all active:scale-95 items-center gap-2 text-sm">
+                            <i class="fa-solid fa-map-location-dot text-base text-organic-honey"></i>
+                            <span>الطرف على الخريطة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- إطار توضيحي فخم للموقع الجغرافي -->
+                <div class="lg:col-span-7 relative h-72 rounded-2xl overflow-hidden border border-stone-200 shadow-inner bg-stone-100 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-[radial-gradient(#8813370b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    <div class="text-center p-6 relative z-10">
+                        <div class="w-16 h-16 rounded-full bg-organic-bordeaux text-white flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg shadow-red-900/15">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                        </div>
+                        <h4 class="font-extrabold text-stone-900 mb-1">الموقع الجغرافي للمحل</h4>
+                        <p class="text-xs text-stone-400 mb-4">اضغط على الزر أدناه لفتح خرائط جوجل مباشرة للوصول إلى فرع فدك الطرف</p>
+                        <a href="https://maps.app.goo.gl/U4vLQMtsZZZ6yi168" target="_blank" class="bg-white hover:bg-stone-50 border border-stone-200 text-stone-800 px-4 py-2.5 rounded-xl text-xs font-bold inline-flex items-center gap-1 shadow-sm transition-all">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> فتح موقع قوقل ماب
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تواصل معنا والطلب الفوري السريع -->
+    <section id="contact" class="py-16 bg-stone-50/50 border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-organic-charcoal to-stone-900 rounded-3xl text-white overflow-hidden shadow-2xl border border-stone-800">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    
+                    <!-- تفاصيل المحل وقنوات التواصل -->
+                    <div class="p-8 sm:p-12 md:p-16 flex flex-col justify-between">
+                        <div>
+                            <span class="text-organic-honey text-xs font-black uppercase tracking-widest block mb-3">📍 فرع فدك الطرف</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 leading-tight">طلبك يجهز فوراً وبعناية وتغليف فخم</h2>
+                            <p class="text-stone-300 mb-8 leading-relaxed text-sm">
+                                تواصل معنا لتأكيد طلبك أو للاستفسار عن المنتجات المتوفرة. يمكنك كذلك زيارة الروابط الرسمية للمحل على مواقع التواصل الاجتماعي لتفاصيل إضافية.
+                            </p>
+
+                            <!-- وسائل الاتصال والروابط المباشرة -->
+                            <div class="space-y-6">
+                                <a href="tel:0544103066" class="flex items-center gap-4 group">
+                                    <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-xl group-hover:bg-white group-hover:text-organic-charcoal transition-all">
+                                        <i class="fa-solid fa-phone text-organic-honey"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-stone-400 text-xs block">رقم الاتصال المباشر</span>
+                                        <span class="font-bold text-lg">0544103066</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://wa.me/966544103066" target="_blank" class="flex items-center gap-4 group">
+                                    <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-xl group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                                        <i class="fa-brands fa-whatsapp text-2xl text-emerald-400 group-hover:text-white"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-stone-400 text-xs block">المراسلة الفورية عبر الواتساب</span>
+                                        <span class="font-bold text-lg">مراسلة سريعة للطلب</span>
+                                    </div>
+                                </a>
+
+                                <a href="https://linkin1.com/meat" target="_blank" class="flex items-center gap-4 group">
+                                    <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-xl group-hover:bg-blue-500 group-hover:text-white transition-all">
+                                        <i class="fa-solid fa-link text-blue-400"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-stone-400 text-xs block">روابط وحسابات المحل الموحدة</span>
+                                        <span class="font-bold text-lg underline">linkin1.com/meat</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- حالة التواجد السريع ومسؤولية المتجر -->
+                        <div class="mt-12 pt-6 border-t border-stone-800 text-xs text-stone-400 flex justify-between">
+                            <span>🕒 متواجدون لخدمتكم طوال اليوم</span>
+                            <span class="font-bold">فدك الطرف</span>
+                        </div>
+                    </div>
+
+                    <!-- نموذج الطلب اليدوي السريع لرسائل الواتساب -->
+                    <div class="bg-stone-900/40 flex items-center justify-center p-8 border-t lg:border-t-0 lg:border-r border-stone-800">
+                        <div class="bg-white text-stone-900 p-8 rounded-2xl shadow-2xl w-full max-w-sm">
+                            <h4 class="font-extrabold text-xl text-center mb-6 text-organic-charcoal">طلب يدوي سريع</h4>
+                            
+                            <form id="quick-order-form" onsubmit="sendWhatsAppOrder(event)" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-stone-700 mb-1">الاسم الكريم</label>
+                                    <input type="text" id="order-name" required placeholder="أدخل اسمك الكريم" class="w-full px-4 py-2.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-organic-bordeaux outline-none font-bold text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-stone-700 mb-1">تفاصيل ومكونات الطلب</label>
+                                    <textarea id="order-details" required placeholder="اكتب الأصناف والكميات التي ترغب بها (مثال: ٢ كيلو لحم حاشي، دجاج التنمية، كباب دجاج)" rows="3" class="w-full px-4 py-2.5 border border-stone-200 rounded-xl focus:ring-2 focus:ring-organic-bordeaux outline-none resize-none font-bold text-sm"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3.5 rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95 text-sm">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب للواتساب
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة (Footer) المطور -->
+    <footer class="bg-organic-charcoal text-stone-500 py-12 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-stone-800">
+                <!-- معلومات سريعة عن فدك الطرف -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-organic-bordeaux flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-cheese"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">فدك الطرف</span>
+                    </div>
+                    <p class="text-xs leading-relaxed text-stone-400">
+                        نهتم بتقديم أعلى معايير الجودة والنظافة في اللحوم الطازجة، الدواجن اليومية، والمفرومات والمشويات المتبلة بجانب الخضار والفواكه المختارة بعناية.
+                    </p>
+                </div>
+
+                <!-- تصنيفات المنتجات للتسهيل -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">أقسامنا الطازجة</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#products-area" onclick="filterCategory('meat')" class="hover:text-white transition-colors">🥩 لحوم بلدي طازجة</a></li>
+                        <li><a href="#products-area" onclick="filterCategory('poultry')" class="hover:text-white transition-colors">🐔 دواجن مبردة يومياً</a></li>
+                        <li><a href="#products-area" onclick="filterCategory('vegetables')" class="hover:text-white transition-colors">🍅 خضار طازجة فريش</a></li>
+                        <li><a href="#products-area" onclick="filterCategory('fruits')" class="hover:text-white transition-colors">🍇 فواكه موسمية ممتازة</a></li>
+                    </ul>
+                </div>
+
+                <!-- معلومات الدعم والموقع والاتصال -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">دعم العملاء والتوجيه</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-organic-bordeaux"></i>
+                            <a href="tel:0544103066" class="hover:text-white font-bold">0544103066</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            <a href="https://wa.me/966544103066" class="hover:text-white">راسلنا على الواتساب</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-snapchat text-amber-400"></i>
+                            <a href="https://www.snapchat.com/add/buadnan707?share_id=cA_FySFNQyOImuowO9DGCw&locale=ar_SA@numbers=arab" target="_blank" class="hover:text-white">حساب السناب شات</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-[10px] text-stone-600">
+                <p>&copy; 2026 فدك الطرف للحوم والخضار والفواكه. جميع الحقوق محفوظة.</p>
+                <p class="mt-1">صُمم الموقع بأسلوب بوتيك فاخر لتسهيل وسرعة تصفح المنتجات والطلب من الجوال.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- شريط عائم سفلي مريح للغاية للجوال للتواصل الفوري والسريع -->
+    <div class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md shadow-2xl border-t border-stone-100 py-3.5 px-4 flex justify-around items-center md:hidden z-40">
+        <!-- زر اتصال فوري -->
+        <a href="tel:0544103066" class="flex flex-col items-center text-stone-700 hover:text-organic-bordeaux w-1/3 border-e border-stone-100">
+            <i class="fa-solid fa-phone text-base mb-1"></i>
+            <span class="text-[9px] font-black">اتصال بالمحل</span>
+        </a>
+        <!-- زر فتح الواتساب المباشر -->
+        <a href="https://wa.me/966544103066" target="_blank" class="flex flex-col items-center text-emerald-600 hover:text-emerald-700 w-1/3 border-e border-stone-100">
+            <i class="fa-brands fa-whatsapp text-lg mb-1"></i>
+            <span class="text-[9px] font-black">واتساب مباشر</span>
+        </a>
+        <!-- زر روابطنا الموحد الجديد للجوال -->
+        <a href="https://linkin1.com/meat" target="_blank" class="flex flex-col items-center text-stone-700 hover:text-organic-bordeaux w-1/3">
+            <i class="fa-solid fa-link text-base mb-1"></i>
+            <span class="text-[9px] font-black">روابطنا الموحدة</span>
+        </a>
+    </div>
+
+    <!-- كود الـ JavaScript التفاعلي لإدارة وعرض المنتجات وتصفيتها والبحث المباشر -->
+    <script>
+        // مصفوفة المنتجات الضخمة والكاملة لفرع فدك الطرف (لحوم، خضار، فواكه، دجاج طازج)
+        const productsData = [
+            // ١_اللحوم الطازجة
+            { id: 1, name: "لحم حاشي طازج", desc: "لحم حاشي بلدي طازج يومياً، يتميز بمذاقه الرائع وقيمته الغذائية العالية ونعومته في الطبخ.", cat: "meat", icon: "🥩", label: "بلدي طازج" },
+            { id: 2, name: "لحم خروف طازج", desc: "لحم خروف نعيمي بلدي منتقى بعناية، مثالي للكبسة والمناسبات والعزائم والأكلات البلدية.", cat: "meat", icon: "🐏", label: "نعيمي بلدي" },
+            { id: 3, name: "لحم بتلو طازج", desc: "لحم بتلو طري وصحي، قليل الدهون ومناسب جداً للطهي الخفيف والسريع للأطفال والدايت.", cat: "meat", icon: "🥩", label: "لحم بتلو طري" },
+            { id: 4, name: "ريش وضلوع غنم", desc: "ريش وضلوع غنم بلدي مقطعة باحترافية، لينة ومثالية للشواء المباشر بالفرن أو الفحم.", cat: "meat", icon: "🍖", label: "جاهز للشواء" },
+            { id: 5, name: "أوصال لحم عجل", desc: "أوصال لحم عجل مقطعة مخصصة للكبسات والطبخ الطويل، تتميز بالليونة والمذاق الفخم.", cat: "meat", icon: "🥩", label: "ممتاز للطبخ" },
+
+            // ٢_دجاج مبرد وطازج
+            { id: 6, name: "دجاج مبرد طازج", desc: "دجاج مبرد طازج يومياً، منظف ومجهز بالكامل ليكون جاهزاً للفرن والطبخ مباشرة.", cat: "poultry", icon: "🐔", label: "مبرد طازج" },
+            { id: 7, name: "صدور دجاج مخلية", desc: "صدور دجاج طازجة مخلية تماماً من العظم والجلد، خيار ممتاز للدايت والأكلات السريعة.", cat: "poultry", icon: "🍗", label: "صحي ونظيف" },
+            { id: 8, name: "شيش طاووق متبل", desc: "قطع دجاج طرية متبلة بخلطة بهارات فدك والزبادي والليمون الشهية جاهزة للشواء.", cat: "poultry", icon: "🍢", label: "متبل وجاهز" },
+
+            // ٣_الخضار الطازج
+            { id: 9, name: "طماطم بلدي طازجة", desc: "طماطم بلدي حمراء ممتازة، منتقاة حبة بحبة، طازجة وقطاف فجر اليوم لتزيين جميع طبخاتك.", cat: "vegetables", icon: "🍅", label: "قطاف اليوم" },
+            { id: 10, name: "خيار بلدي مقرمش", desc: "خيار بلدي طازج يومي، ممتاز للسلطات ويتميز بقرمشته ونضارته ومحفوظ بعناية فائقة.", cat: "vegetables", icon: "🥒", label: "خيار فريش" },
+            { id: 11, name: "بطاطس عالية الجودة للطبخ", desc: "حبات بطاطس نظيفة ممتازة للقلي أو صواني الفرن والطبخ، جافة ومحفوظة بالتهوية المناسبة.", cat: "vegetables", icon: "🥔", label: "نظيفة وجافة" },
+            { id: 12, name: "بصل أحمر حائلي", desc: "بصل أحمر حائلي نخب أول، أساس الكبسة والطبخ اليومي بجودة ممتازة وفرز نظيف.", cat: "vegetables", icon: "🧅", label: "نخب أول" },
+            { id: 13, name: "بصل أبيض طازج", desc: "بصل أبيض ممتاز، طعمه مميز وحلو في الطبخ والسلطات والشوربات اليومية المنوعة.", cat: "vegetables", icon: "🧅", label: "فرز نخب أول" },
+            { id: 14, name: "ورقيات خضراء مشكلة", desc: "تشكيلة معقمة ومغسولة من الكزبرة، البقدونس، النعناع، والجرجير الطازج والنظيف يومياً.", cat: "vegetables", icon: "🌿", label: "مغسول ومعقم" },
+            { id: 15, name: "جزر بلدي ممتاز", desc: "حبات جزر بلدي برتقالية زاهية، غني بالفيتامينات وطعم حلو ومقرمش في جميع الطبخات والسلطات.", cat: "vegetables", icon: "🥕", label: "غني بالفيتامينات" },
+            { id: 16, name: "كوسة طازجة خضراء", desc: "حبات كوسة خضراء طازجة وطرية، قطاف اليوم وممتازة لشوربة الخضار والطبخات اليومية.", cat: "vegetables", icon: "🥒", label: "قطاف اليوم فريش" },
+
+            // ٤_الفواكه الموسمية
+            { id: 17, name: "تفاح أحمر وأخضر", desc: "تفاح مقرمش وحلو المذاق، مليء بالفوائد والسكريات الطبيعية ومستورد من أفضل المزارع العالمية.", cat: "fruits", icon: "🍎", label: "حلو المذاق" },
+            { id: 18, name: "موز بلدي فاخر", desc: "موز أصفر ناصع وناضج تماماً، غني بالطاقة ومحبب ومناسب للأطفال والرياضيين.", cat: "fruits", icon: "🍌", label: "جودة ممتازة" },
+            { id: 19, name: "برتقال عصير ممتاز", desc: "برتقال غني بالعصارة الطبيعية وفيتامين سي، منتقى بعناية تامة لعصير منعش وصحي.", cat: "fruits", icon: "🍊", label: "عصير فريش" },
+            { id: 20, name: "عنب أحمر وأخضر", desc: "حبات عنب ناضجة بدون بذر، طعم حلو جداً ومثالي للتحلية الطبيعية الباردة بعد الوجبات.", cat: "fruits", icon: "🍇", label: "موسمي طازج" },
+            { id: 21, name: "حبحب (بطيخ) أحمر مرمل", desc: "حبحب على السكين حلو ومرمل، يبرد على القلب ويتم فرزه للتأكد من حلاوته وجودته.", cat: "fruits", icon: "🍉", label: "على السكين" },
+            { id: 22, name: "ليمون أصفر وأخضر طازج", desc: "حبات ليمون غنية بالعصير والأسيد، لإضافة نكهة حموضة طبيعية وقوية لأطباقك وسلطاتك.", cat: "fruits", icon: "🍋", label: "عصير ونكهة" }
+        ];
+
+        let activeCategory = 'all';
+
+        // دالة لحساب وتحديث عداد الأصناف في واجهة التصنيفات
+        function calculateDepartmentCounters() {
+            const categories = ['meat', 'poultry', 'vegetables', 'fruits'];
+            
+            categories.forEach(cat => {
+                const count = productsData.filter(p => p.cat === cat).length;
+                const counterElement = document.getElementById(`count-${cat}`);
+                if (counterElement) {
+                    counterElement.innerText = `${count} أصناف`;
+                }
+            });
+        }
+
+        // دالة لعرض وتوليد المنتجات بالشبكة
+        function renderProducts(filteredList) {
+            const grid = document.getElementById("products-grid");
+            const noResults = document.getElementById("no-results-msg");
+            
+            grid.innerHTML = "";
+
+            if (filteredList.length === 0) {
+                noResults.classList.remove("hidden");
+                grid.classList.add("hidden");
+                return;
+            }
+
+            noResults.classList.add("hidden");
+            grid.classList.remove("hidden");
+
+            filteredList.forEach(p => {
+                const card = document.createElement("div");
+                // تصميم البوتيك الزجاجي الفاخر مع تظليل خفيف
+                card.className = "bg-white rounded-[24px] p-5 border border-stone-200/60 shadow-sm hover:shadow-xl hover:border-organic-emerald/20 transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-1";
+
+                let catColor = "bg-red-50 text-organic-bordeaux border-red-100";
+                if (p.cat === "poultry") catColor = "bg-amber-50 text-organic-honey border-amber-100";
+                if (p.cat === "vegetables") catColor = "bg-lime-50 text-lime-700 border-lime-100";
+                if (p.cat === "fruits") catColor = "bg-purple-50 text-purple-700 border-purple-100";
+
+                const whatsappMsg = `السلام عليكم ورحمة الله وبركاته، أرغب في الاستفسار عن منتج: "${p.name}" من محل فدك الطرف.`;
+                const whatsappUrl = `https://wa.me/966544103066?text=${encodeURIComponent(whatsappMsg)}`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-12 h-12 rounded-xl ${catColor.split(' ')[0]} flex items-center justify-center text-xl shadow-inner">
+                                ${p.icon}
+                            </div>
+                            <span class="text-[10px] font-black px-2.5 py-1 rounded-full border ${catColor}">
+                                ${p.label}
+                            </span>
+                        </div>
+                        <h3 class="text-sm sm:text-base font-black text-stone-900 mb-1">${p.name}</h3>
+                        <p class="text-stone-400 text-[11px] sm:text-xs leading-relaxed mb-4">${p.desc}</p>
+                    </div>
+
+                    <div class="pt-3.5 border-t border-stone-100 mt-auto">
+                        <a href="${whatsappUrl}" target="_blank" class="w-full bg-stone-100 hover:bg-organic-emerald text-stone-800 hover:text-white py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-sm text-emerald-600 group-hover:text-white"></i> 
+                            <span>استفسر واتساب</span>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // دالة لتصفية المنتجات بناءً على الأقسام
+        function filterCategory(category) {
+            activeCategory = category;
+            
+            // تحديث تصميم الأزرار النشطة وغير النشطة
+            const buttons = document.querySelectorAll(".filter-btn");
+            buttons.forEach(b => b.className = "filter-btn inactive-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0");
+
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.className = "filter-btn active-btn px-6 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shrink-0 shadow-md";
+            }
+
+            // مسح حقل البحث عند تبديل الأقسام لضمان سلاسة التصفح
+            document.getElementById("live-search-input").value = "";
+            document.getElementById("clear-search-btn").classList.add("hidden");
+
+            const filtered = category === 'all' ? productsData : productsData.filter(p => p.cat === category);
+            renderProducts(filtered);
+
+            // تصفح تلقائي لقسم المنتجات عند الضغط من الأقسام بالأعلى
+            if (category !== 'all') {
+                document.getElementById("products-area").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // دالة البحث المباشر في قاعدة البيانات (Live Search)
+        function searchProducts() {
+            const input = document.getElementById("live-search-input");
+            const filterValue = input.value.trim().toLowerCase();
+            const clearBtn = document.getElementById("clear-search-btn");
+
+            if (filterValue.length > 0) {
+                clearBtn.classList.remove("hidden");
+            } else {
+                clearBtn.classList.add("hidden");
+            }
+
+            // البحث فقط داخل القسم النشط حالياً لتسهيل فلترة العميل
+            const baseList = activeCategory === 'all' ? productsData : productsData.filter(p => p.cat === activeCategory);
+            
+            const filtered = baseList.filter(p => 
+                p.name.toLowerCase().includes(filterValue) || 
+                p.desc.toLowerCase().includes(filterValue) ||
+                p.label.toLowerCase().includes(filterValue)
+            );
+
+            renderProducts(filtered);
+        }
+
+        // دالة لمسح البحث وإعادة المنتجات كاملة للقسم الحالي
+        function clearSearch() {
+            const input = document.getElementById("live-search-input");
+            input.value = "";
+            document.getElementById("clear-search-btn").classList.add("hidden");
+            
+            const baseList = activeCategory === 'all' ? productsData : productsData.filter(p => p.cat === activeCategory);
+            renderProducts(baseList);
+        }
+
+        // إرسال الطلب اليدوي السريع من نموذج التواصل
+        function sendWhatsAppOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById("order-name").value;
+            const details = document.getElementById("order-details").value;
+            const message = `مرحباً فدك الطرف،\nأنا العميل: ${name}\nأرغب في الاستفسار والطلب الفوري للمنتجات التالية:\n${details}`;
+            const url = `https://wa.me/966544103066?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // أنماط مخصصة إضافية لزر الفلترة النشط والتأثيرات
+        const styleSheet = document.createElement("style");
+        styleSheet.innerText = `
+            .active-btn {
+                background-color: #065f46 !important;
+                color: #ffffff !important;
+            }
+            .inactive-btn {
+                background-color: #f5f5f4 !important;
+                color: #44403c !important;
+            }
+            .inactive-btn:hover {
+                background-color: #e7e5e4 !important;
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+        // تحميل أولي للعدادات والمنتجات فور فتح الصفحة
+        window.onload = function() {
+            calculateDepartmentCounters();
+            renderProducts(productsData);
+        }
+    </script>
+</body>
+</html>
+
+```
